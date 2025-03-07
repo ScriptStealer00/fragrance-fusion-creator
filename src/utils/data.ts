@@ -3,7 +3,7 @@ export interface Product {
   id: string;
   name: string;
   brand: string;
-  category: 'perfume' | 'deodorant' | 'soap' | 'lattafa' | 'other';
+  category: string; // Changed from enum to string to allow dynamic categories
   description: string;
   dupeOf?: string;
   price: number;
@@ -12,13 +12,18 @@ export interface Product {
   featured?: boolean;
 }
 
+export interface Category {
+  id: string;
+  name: string;
+}
+
 export interface User {
   id: string;
   username: string;
   isAdmin: boolean;
 }
 
-export const categories = [
+export const initialCategories: Category[] = [
   { id: 'perfume', name: 'Parfüm' },
   { id: 'deodorant', name: 'Deo' },
   { id: 'lattafa', name: 'Lattafa' },

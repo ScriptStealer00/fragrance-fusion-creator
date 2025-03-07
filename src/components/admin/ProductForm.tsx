@@ -1,16 +1,18 @@
 
-import React, { useState } from 'react';
-import { Product, categories } from '@/utils/data';
+import React, { useState, useEffect } from 'react';
+import { Product, Category } from '@/utils/data';
 import { toast } from 'sonner';
 
 interface ProductFormProps {
   product?: Product;
+  categories: Category[];
   onSave: (product: Product) => void;
   onCancel: () => void;
 }
 
 const ProductForm: React.FC<ProductFormProps> = ({ 
   product, 
+  categories,
   onSave, 
   onCancel 
 }) => {
@@ -18,7 +20,7 @@ const ProductForm: React.FC<ProductFormProps> = ({
     product || {
       name: '',
       brand: '',
-      category: 'perfume',
+      category: categories.length > 0 ? categories[0].id : '',
       description: '',
       dupeOf: '',
       price: 0,
@@ -29,6 +31,16 @@ const ProductForm: React.FC<ProductFormProps> = ({
   );
   
   const [notesInput, setNotesInput] = useState('');
+  
+  // Update category if categories change
+  useEffect(() => {
+    if (categories.length > 0 && !formData.category) {
+      setFormData(prev => ({
+        ...prev,
+        category: categories[0].id
+      }));
+    }
+  }, [categories, formData.category]);
   
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value, type } = e.target;
@@ -227,7 +239,7 @@ const ProductForm: React.FC<ProductFormProps> = ({
             className="h-4 w-4 text-gold rounded"
           />
           <label htmlFor="featured" className="ml-2 text-sm">
-            Als Featured markieren
+            Als Highlight markieren
           </label>
         </div>
       </div>

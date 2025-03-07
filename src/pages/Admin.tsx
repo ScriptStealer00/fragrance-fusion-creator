@@ -24,7 +24,7 @@ const Admin = () => {
         <div className="text-center mb-8 opacity-0 animate-fadeIn">
           <h1 className="text-3xl font-serif">Admin-Bereich</h1>
           <p className="text-muted-foreground">
-            Hier kannst du Produkte hinzufügen, bearbeiten und löschen.
+            Hier kannst du Produkte und Kategorien verwalten sowie Highlights festlegen.
           </p>
         </div>
         
