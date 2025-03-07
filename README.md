@@ -5,7 +5,7 @@ Follow these steps:
 git clone https://github.com/ScriptStealer00/fragrance-fusion-creator.git
 
 # Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+cd fragrance-fusion-creator
 
 # Step 3: Install the necessary dependencies.
 npm i
