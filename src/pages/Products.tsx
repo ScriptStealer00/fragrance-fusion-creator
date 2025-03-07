@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Product, initialProducts, categories } from '@/utils/data';
+import { Product, initialProducts, initialCategories } from '@/utils/data';
 import FragranceCard from '@/components/ui/FragranceCard';
 import CategoryBadge from '@/components/ui/CategoryBadge';
 import { useLocation } from 'react-router-dom';
@@ -59,7 +59,7 @@ const Products = () => {
                 onClick={() => setSelectedCategory(null)}
                 isActive={selectedCategory === null}
               />
-              {categories.map(category => (
+              {initialCategories.map(category => (
                 <CategoryBadge
                   key={category.id}
                   category={category.name}
