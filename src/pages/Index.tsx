@@ -30,7 +30,7 @@ const Index = () => {
             Deine Lieblingsdüfte, neu interpretiert
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-medium mb-6 text-balance">
-            Entdecke die Welt der Premium Dupes
+            BySAM Parfüm - Premium Dupes
           </h1>
           <p className="text-lg text-muted-foreground mb-8 max-w-md mx-auto">
             Hochwertige Alternativen zu bekannten Düften - von Parfüms und Deos bis hin zu Lattafa-Produkten und handgemachten Seifen.

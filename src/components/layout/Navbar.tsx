@@ -35,8 +35,8 @@ const Navbar = () => {
             to="/" 
             className="text-fragranceDark font-serif text-2xl font-medium tracking-wider flex items-center"
           >
-            <span className="text-gold">Fragrance</span>
-            <span className="ml-1">Dupes</span>
+            <span className="text-gold">BySAM</span>
+            <span className="ml-1">Parfüm</span>
           </Link>
           
           {/* Desktop Menu */}
